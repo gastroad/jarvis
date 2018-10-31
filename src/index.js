@@ -1,5 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
-
-ReactDOM.render(<App />, document.getElementById("target"));
+import { SampleProvider } from "./Context/Context";
+ReactDOM.render(
+	<SampleProvider>
+		{/* <Provider store={store}> */}
+			<App />
+		{/* </Provider> */}
+	</SampleProvider>,
+	document.getElementById("target")
+);
